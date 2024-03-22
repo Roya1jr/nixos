@@ -1,0 +1,82 @@
+[[language]]
+name = "uiua"
+scope = "source.uiua"
+injection-regex = "uiua"
+file-types = ["ua"]
+roots = []
+auto-format = true
+comment-token = "#"
+language-servers = [ "uiua-lsp" ]
+indent = { tab-width = 2, unit = "  " }
+shebangs = ["uiua"]
+
+[language-server.uiua-lsp]
+command = "uiua"
+args = ["lsp"]
+
+
+[[grammar]]
+name = "uiua"
+source.git = "https://github.com/shnarazk/tree-sitter-uiua"
+source.rev = "942e8365d10b9b62be9f2a8b0503459d3d8f3af3"
+
+[[language]]
+name = "bqn"
+file-types = ["bqn"]
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+shebangs = ["bqn", "cbqn"]
+roots = []
+injection-regex = "bqn"
+scope = "scope.bqn"
+language-servers = ["bqnlsp"]
+language-id = "bqn"
+
+
+[language-server.bqnlsp]
+command = "bqnlsp"
+
+
+[[grammar]]
+name = "bqn"
+source.git = "https://github.com/shnarazk/tree-sitter-bqn"
+source.rev = "a90b371503f158699042423918e4c5e9285f5519"
+
+[language.auto-pairs]
+'⟨' = '⟩'
+'(' = ')'
+'{' = '}'
+'[' = ']'
+
+[[language]]
+name = "nix"
+formatter = { command = "nixpkgs-fmt" }
+
+[[language]]
+name = "go"
+auto-format = true
+formatter = { command = "goimports" }
+
+[[language]]
+name = "unison"
+scope = "source.unison"
+file-types = ["u"]
+roots = []
+language-servers = ["unison-lsp"]
+
+[language-server.unison-lsp]
+command = "ncat"
+args= ["localhost", "5757"]
+
+[[language]]
+name = "python"
+roots = ["pyproject.toml"]
+language-servers = ["pylsp", "ruff"]
+
+[language-server.pylsp]
+command = "pylsp"
+
+[language-server.ruff]
+command = "ruff-lsp"
+config = { settings = { run = "onSave" } }
+ 
