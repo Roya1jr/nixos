@@ -4,8 +4,13 @@ let
     upkgs = with unstable; [
     ## Tools
     air
+    biome
+    go-swag
     helix
+    jujutsu
+    neofetch
     tailwindcss
+    templ
 
     ## Db
     tigerbeetle
@@ -62,8 +67,6 @@ in
     username = "prince";
     packages = with pkgs; [
       # CLI Tools
-      awscli2
-      awsebcli
       bat
       bash
       butane
@@ -110,43 +113,51 @@ in
       ghc
       gforth
       io
-      ## janet
+      
+      ##Janet
       janet
       jpm
-      ##
-      ## Kotlin
+      ##Janet
+      
+      ##Kotlin
       kotlin
       kotlin-language-server
-      ##
-      ## lua
+      ##Kotlin
+      
+      ##Lua
       lua
       luarocks
-      ##
+      ##Lua
+      
       mercury
-      ## Ocaml
+      
+      ##Ocaml
       ocaml
       opam
-      ##
+      ##Ocaml
+      
       perl
-      ## python
+      
+      ##Python
       python311
       python311Packages.pip
       python311Packages.ruff-lsp
       python311Packages.python-lsp-server
-      ##
+      ##Python
+      
       racket
       rakudo
       rustup
-      ## Java
+      
+      ##Java
       zulu
-      ##
+      ##Java
       
       # Runtimes
       nodejs_21
       wasmtime
     
       # Build Tools
-      #clang-tools
       libclang
       gfortran
       git
