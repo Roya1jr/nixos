@@ -52,8 +52,7 @@ let
     jellyfin-ffmpeg
 
     ## GUI
-    heroic
-    rpcs3    
+    heroic    
   ];
 inherit system;
 
