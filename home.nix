@@ -8,6 +8,7 @@ let
     go-swag
     helix
     jujutsu
+    kakoune
     neofetch
     tailwindcss
     templ
@@ -52,7 +53,8 @@ let
     jellyfin-ffmpeg
 
     ## GUI
-    heroic    
+    heroic
+    geany    
   ];
 inherit system;
 
