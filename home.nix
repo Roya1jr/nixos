@@ -104,7 +104,6 @@ in
       traceroute
       tree-sitter
       unzip
-      vault
       wget
       wl-clipboard
       yarn
