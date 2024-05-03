@@ -176,7 +176,6 @@ in
       # GUI
       blender    
       dbeaver
-      floorp
       godot_4
       inkscape
       mpv
