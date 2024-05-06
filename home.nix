@@ -54,7 +54,8 @@ let
 
     ## GUI
     heroic
-    geany    
+    geany
+    godot_4    
   ];
 inherit system;
 
@@ -176,7 +177,6 @@ in
       # GUI
       blender    
       dbeaver
-      godot_4
       inkscape
       mpv
       vscode
