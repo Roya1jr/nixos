@@ -27,7 +27,7 @@ let
     go_1_22
     gopls
     gotools
-    dlv
+    delve
     ###
     
     hare
