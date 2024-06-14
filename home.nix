@@ -26,7 +26,7 @@ let
     ###golang
     go_1_22
     gopls
-    goimports
+    gotools
     dlv
     ###
     
