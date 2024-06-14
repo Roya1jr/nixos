@@ -22,27 +22,33 @@ let
     ## Languages
     cbqn-replxx
     factor-lang
+    
+    ###golang
     go_1_22
+    gopls
+    goimports
+    dlv
+    ###
+    
     hare
     jelly
-    nim-unwrapped-2
     uiua
     unison-ucm
+    
+    ###zig
     zig
-
+    zls
+    ###
 
     ## LSP
-    nimlsp
     nil
     nixpkgs-fmt
     vscode-langservers-extracted
     typescript
     nodePackages.typescript-language-server
-    lua-language-server
     marksman
     yaml-language-server
     taplo
-    zls
 
     ##Game engines
     raylib
