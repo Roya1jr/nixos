@@ -57,7 +57,7 @@ let
     jellyfin
     jellyfin-web
     jellyfin-ffmpeg
-
+    gamescope-wsi
     ## GUI
     heroic
     geany
