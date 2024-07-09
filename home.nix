@@ -147,10 +147,10 @@ in
       perl
       
       ##Python
-      python311
-      python311Packages.pip
-      python311Packages.ruff-lsp
-      python311Packages.python-lsp-server
+      python312
+      #python312Packages.pip
+      #ruff-lsp
+      #python312Packages.python-lsp-server
       ##Python
       
       racket
