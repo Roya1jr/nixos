@@ -21,6 +21,7 @@ let
 
     ## Languages
     cbqn-replxx
+    dyalog
     factor-lang
     
     ###golang
@@ -60,8 +61,8 @@ let
     gamescope-wsi
     ## GUI
     heroic
-    geany
-    godot_4    
+    godot_4
+    ride    
   ];
 inherit system;
 
@@ -148,9 +149,9 @@ in
       
       ##Python
       python312
-      #python312Packages.pip
-      #ruff-lsp
-      #python312Packages.python-lsp-server
+      python312Packages.pip
+      ruff-lsp
+      python312Packages.python-lsp-server
       ##Python
       
       racket
