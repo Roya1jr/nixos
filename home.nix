@@ -21,7 +21,7 @@ let
 
     ## Languages
     cbqn-replxx
-    dyalog
+    (dyalog.override { acceptLicense = true; })
     factor-lang
     
     ###golang
@@ -149,9 +149,9 @@ in
       
       ##Python
       python312
-      python312Packages.pip
-      ruff-lsp
-      python312Packages.python-lsp-server
+      #python312Packages.pip
+      #ruff-lsp
+      #python312Packages.python-lsp-server
       ##Python
       
       racket

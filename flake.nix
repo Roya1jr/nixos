@@ -18,8 +18,8 @@
 
 let 
 	system = "x86_64-linux";
-	pkgs = import nixpkgs {inherit system;};
-	unstable = import nixpkgs-unstable {inherit system;};
+	pkgs = import nixpkgs {inherit system; config.allowUnfree = true;};
+	unstable = import nixpkgs-unstable {inherit system; config.allowUnfree = true;};
 in
 
 {
@@ -27,7 +27,7 @@ in
       nixos = nixpkgs.lib.nixosSystem {
       inherit system; 
         modules = [
-          ./configuration.nix 
+          ./configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
