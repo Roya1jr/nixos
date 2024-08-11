@@ -33,7 +33,14 @@ let
     
     hare
     jelly
-    uiua
+
+    ##Python
+      python312
+      python312Packages.pip
+      ruff-lsp
+      python312Packages.python-lsp-server
+    ##Python
+     uiua
     unison-ucm
     
     ###zig
@@ -147,13 +154,7 @@ in
       
       perl
       
-      ##Python
-      python312
-      #python312Packages.pip
-      #ruff-lsp
-      #python312Packages.python-lsp-server
-      ##Python
-      
+     
       racket
       rakudo
       rustup
