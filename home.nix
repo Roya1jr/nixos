@@ -69,6 +69,7 @@ let
     ## GUI
     heroic
     godot_4
+    vscode
     ride    
   ];
 inherit system;
@@ -187,7 +188,6 @@ in
       dbeaver
       inkscape
       mpv
-      vscode
       wezterm
     ] ++  upkgs;
   };
