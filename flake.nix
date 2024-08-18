@@ -3,45 +3,54 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable"; 
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     home-manager = {
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    bqnlsp ={ 
-    url = "sourcehut:/~detegr/bqnlsp";
-    flake = true;
+    bqnlsp = {
+      url = "sourcehut:/~detegr/bqnlsp";
+      flake = true;
     };
   };
 
-  outputs = inputs@{ nixpkgs,nixpkgs-unstable, home-manager, ... }:  
+  outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, ... }:
 
-let 
-	system = "x86_64-linux";
-	pkgs = import nixpkgs {inherit system; config.allowUnfree = true;};
-	unstable = import nixpkgs-unstable {inherit system; config.allowUnfree = true;};
-in
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
+      unstable = import nixpkgs-unstable { inherit system; config.allowUnfree = true; };
+    in
 
-{
-    nixosConfigurations = { 
-      nixos = nixpkgs.lib.nixosSystem {
-      inherit system; 
-        modules = [
-          ./configuration.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.prince = import ./home.nix;
-            home-manager.extraSpecialArgs = {
-	               inherit unstable;
-                 inherit inputs;
-                 inherit system;
-	         };
-          
-         }
-        ];
-      };
+    {
+      nixosConfigurations =
+        let
+          mkSystem =
+            entrypoint:
+            nixpkgs.lib.nixosSystem {
+              inherit system;
+              specialArgs = {
+                inherit inputs;
+                inherit unstable;
+              };
+              modules = [
+                entrypoint
+                { nix.registry.nixpkgs.flake = nixpkgs; }
+                home-manager.nixosModules.home-manager
+                {
+                  home-manager = {
+                    useGlobalPkgs = true;
+                    useUserPackages = true;
+                  };
+                }
+              ];
+            };
+        in
+        {
+          desktop = mkSystem ./configs/home/pc;
+          laptop = mkSystem ./configs/home/laptop;
+          wsl = mkSystem ./configs/home/wsl;
+        };
     };
-  };
 }
