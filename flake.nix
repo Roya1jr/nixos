@@ -48,7 +48,7 @@
             };
         in
         {
-          desktop = mkSystem ./configs/home/pc;
+          desktop = mkSystem ./configs/home/desktop;
           laptop = mkSystem ./configs/home/laptop;
           wsl = mkSystem ./configs/home/wsl;
         };
