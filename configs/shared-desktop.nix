@@ -67,10 +67,10 @@
           blender    
           dbeaver-bin
           godot_4
+          heroic
           inkscape
           mpv
           ride
-          wezterm
           vscode
       ];
     in
@@ -82,7 +82,10 @@
           zulu
           ##Java
           #######Programming##########
-
+          
+          ###GUI### 
+          wezterm
+          #########
         ] ++ upkgs;
       };
 
