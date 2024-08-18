@@ -53,12 +53,7 @@
       name = "adwaita-dark";
       package = pkgs.adw-gtk3;
     };
-    gtk3.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
-    };
-    gtk4.extraConfig = {
+       gtk4.extraConfig = {
       Settings = ''
         gtk-application-prefer-dark-theme=1
       '';
