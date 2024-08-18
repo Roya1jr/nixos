@@ -1,4 +1,4 @@
-{ pkgs,lib ,unstable, inputs, system, ... }:
+{ pkgs, lib, unstable, inputs, system, ... }:
 {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -14,7 +14,7 @@
   };
   services.flatpak.enable = true;
   services.printing.enable = true;
- 
+
 
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -60,18 +60,20 @@
     { system, ... }:
     let
       upkgs = with unstable; [
-          #######Programming##########
-         (dyalog.override { acceptLicense = true; })
-          #######Programming##########
-          ## GUI
-          blender    
-          dbeaver-bin
-          godot_4
-          heroic
-          inkscape
-          mpv
-          ride
-          vscode
+        #######Programming##########
+        (dyalog.override { acceptLicense = true; })
+        #######Programming##########
+        ## GUI
+        blender
+        dbeaver-bin
+        godot_4
+        heroic
+        hyprland
+        inkscape
+        mpv
+        ride
+        vscode
+        zed-editor
       ];
     in
     {
@@ -82,7 +84,7 @@
           zulu
           ##Java
           #######Programming##########
-          
+
           ###GUI### 
           wezterm
           #########
