@@ -1,9 +1,6 @@
 { inputs, pkgs, unstable, ... }:
 {
   imports = [
-    inputs.nixos-hardware.nixosModules.common-gpu-amd
-    inputs.nixos-hardware.nixosModules.common-cpu-amd
-    inputs.nixos-hardware.nixosModules.common-pc-ssd
     ./hardware-configuration.nix
     ../../shared-desktop.nix
     ../../shared.nix
