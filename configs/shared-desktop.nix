@@ -65,7 +65,7 @@
           #######Programming##########
           ## GUI
           blender    
-          dbeaver
+          dbeaver-bin
           godot_4
           inkscape
           mpv
@@ -78,7 +78,6 @@
       home = {
         packages = with pkgs;[
           #######Programming##########
-         (dyalog.override { acceptLicense = true; })
           ##Java
           zulu
           ##Java

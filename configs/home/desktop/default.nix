@@ -1,4 +1,4 @@
-{ inputs, pkgs, unstable, ... }:
+{ pkgs, unstable, system, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -7,7 +7,7 @@
   ];
 
   home-manager.users.prince =
-    { pkgs, unstable, inputs, system, ... }:
+    { ... }:
     let
       upkgs = with unstable; [
 
@@ -19,17 +19,10 @@
 
 
         ] ++ upkgs;
+        stateVersion = "23.11";
       };
 
-      ###Services####
-      services.jellyfin = {
-        enable = true;
-        openFirewall = true;
-        user = "prince";
-      };
-      ##############
-
-      ###Settings####
+      ### Installed Settings####
       programs = {
         git = {
           enable = true;
@@ -44,13 +37,25 @@
             };
           };
         };
+      };
+     ################
+    };
+   ###Settings####
+      programs = {
         steam = {
           enable = true;
           remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
           dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
         };
       };
-     ################
-    };
+  ###Settings####
+  
+  ###Services####
+      services.jellyfin = {
+        enable = true;
+        openFirewall = true;
+        user = "prince";
+      };
+  ##############
   system.stateVersion = "23.11";
 }
