@@ -3,7 +3,7 @@
   imports = [
     inputs.nixos-hardware.nixosModules.common-gpu-amd
     inputs.nixos-hardware.nixosModules.common-cpu-amd
-    inputs.hardware.nixosModules.common-pc-ssd
+    inputs.nixos-hardware.nixosModules.common-pc-ssd
     ./hardware-configuration.nix
     ../../shared-desktop.nix
     ../../shared.nix
