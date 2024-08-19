@@ -52,7 +52,8 @@
         erlang_26
         factor-lang
         gleam
-
+        
+        
         ##GOLANG
         air
         go_1_22
@@ -63,7 +64,7 @@
         gnumake
         templ
         ##GOLANG
-
+        j
         ##JS
         biome
         bun
