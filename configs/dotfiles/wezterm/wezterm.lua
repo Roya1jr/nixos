@@ -9,7 +9,7 @@ if wezterm.config_builder then
 end
 
 -- default shell
-config.default_prog = { '/etc/profiles/per-user/prince/bin/fish' }
+config.default_prog = {'/run/current-system/sw/bin/fish' }
 
 -- For example, changing the color scheme:
 config.color_scheme = 'Gruvbox dark, hard (base16)'

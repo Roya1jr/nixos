@@ -1,4 +1,4 @@
-{ pkgs,lib ,unstable, inputs, system, ... }:
+{ pkgs, lib, unstable, inputs, system, ... }:
 {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -14,7 +14,7 @@
   };
   services.flatpak.enable = true;
   services.printing.enable = true;
- 
+
 
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -44,27 +44,6 @@
   hardware.xpadneo.enable = true;
   ##Bluetooth
 
-  gtk = {
-    enable = true;
-    iconTheme = {
-      name = "elementary-Xfce-dark";
-      package = pkgs.elementary-xfce-icon-theme;
-    };
-    theme = {
-      name = "adwaita-dark";
-      package = pkgs.adw-gtk3;
-    };
-    gtk3.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
-    };
-    gtk4.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
-    };
-  };
   programs.dconf.enable = true;
   programs = {
     kdeconnect = {
@@ -81,30 +60,34 @@
     { system, ... }:
     let
       upkgs = with unstable; [
-          #######Programming##########
-         (dyalog.override { acceptLicense = true; })
-          #######Programming##########
-          ## GUI
-          blender    
-          dbeaver
-          godot_4
-          inkscape
-          mpv
-          ride
-          wezterm
-          vscode
+        #######Programming##########
+        (dyalog.override { acceptLicense = true; })
+        #######Programming##########
+        ## GUI
+        blender
+        dbeaver-bin
+        godot_4
+        heroic
+        hyprland
+        inkscape
+        mpv
+        ride
+        vscode
+        zed-editor
       ];
     in
     {
       home = {
         packages = with pkgs;[
           #######Programming##########
-         (dyalog.override { acceptLicense = true; })
           ##Java
           zulu
           ##Java
           #######Programming##########
 
+          ###GUI### 
+          wezterm
+          #########
         ] ++ upkgs;
       };
 

@@ -1,34 +1,11 @@
-{ inputs, pkgs, unstable, ... }:
+{ pkgs, unstable, system, ... }:
 {
   imports = [
-    inputs.nixos-hardware.nixosModules.common-gpu-amd
-    inputs.nixos-hardware.nixosModules.common-cpu-amd
-    inputs.hardware.nixosModules.common-pc-ssd
     ./hardware-configuration.nix
     ../../shared-desktop.nix
     ../../shared.nix
   ];
-  programs = {
-    kdeconnect = {
-      enable = true;
-      package = pkgs.gnomeExtensions.gsconnect;
-    };
-    git = {
-      enable = true;
-      userName = "Prince Junior Mguni";
-      userEmail = "princem@bestforu.co.za";
-      ignores = [ "*node_modules" ];
-      extraConfig = {
-        init = {
-          defaultBranch = "main";
-        };
-        safe = {
-          directory = "/etc/nixos";
-        };
 
-      };
-    };
-  };
   home-manager.users.prince =
     { ... }:
     let
@@ -42,7 +19,37 @@
 
 
         ] ++ upkgs;
+        stateVersion = "23.11";
       };
 
+      ### Installed Settings####
+      programs = {
+        git = {
+          enable = true;
+          userName = "Prince Junior Mguni";
+          userEmail = "princem@bestforu.co.za";
+          ignores = [ "*node_modules" ];
+          extraConfig = {
+            init = {
+              defaultBranch = "main";
+            };
+            safe = {
+              directory = "/etc/nixos";
+            };
+          };
+        };
+      };
+      ################
     };
+  ###Settings####
+  programs = { };
+  ###Settings####
+
+  ###Services####
+  services.fprintd.enable = true;
+  services.fprintd.tod.enable = true;
+  services.fprintd.tod.driver = pkgs.libfprint-2-tod1-vfs0090;
+  ##############
+
+  system.stateVersion = "23.11";
 }
