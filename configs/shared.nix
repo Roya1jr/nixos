@@ -64,7 +64,7 @@
         gnumake
         templ
         ##GOLANG
-  
+        j
         ##JS
         biome
         bun
