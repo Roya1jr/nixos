@@ -81,7 +81,7 @@
         packages = with pkgs;[
           #######Programming##########
           ##Java
-          zulu
+          #zulu
           ##Java
           #######Programming##########
 
