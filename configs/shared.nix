@@ -49,6 +49,7 @@
         ##
 
         cbqn-replxx
+        dotnet-sdk_8
         erlang_26
         factor-lang
         gleam
