@@ -35,27 +35,28 @@
     let
       upkgs = with unstable; [
         #######CLI##########
-        murex
+        #murex
         ####################
 
         #######Programming##########
-        ##C++
+
+        ##C++##
         cmake
         gforth
         glibc
         gfortran
         libclang
         lldb
-        ##
+        ######
 
         cbqn-replxx
-        dotnet-sdk_8
+        #dotnet-sdk_8
         erlang_26
         factor-lang
         gleam
-        
-        
-        ##GOLANG
+        #ghc
+
+        ##GOLANG##
         air
         go_1_22
         golangci-lint
@@ -64,8 +65,19 @@
         hugo
         gnumake
         templ
-        ##GOLANG
+        #########
+
+        #hare
+        #io
         j
+
+        ##Janet
+        #janet
+        #jpm
+        ##Janet
+
+        jelly
+
         ##JS
         biome
         bun
@@ -82,6 +94,14 @@
         lua-language-server
         ##Lua
 
+        #mercury
+
+        ##Ocaml
+        #ocaml
+        #opam
+        ##Ocaml
+
+        #perl
         php
         protobuf_25
 
@@ -95,6 +115,9 @@
 
         qnial
 
+        #racket
+        #rakudo
+
         ##Nix
         nil
         nixpkgs-fmt
@@ -102,41 +125,15 @@
 
         rustup
         tailwindcss
-
         wasmtime
         uiua
+        #unison-ucm
         yaml-language-server
-
-
-        ###Future
-        #io
-        #ghc
-        #hare
-
-        ##Janet
-        #janet
-        #jpm
-        ##Janet
-
-        #jelly
-        #racket
-        #rakudo
-
-        ##Ocaml
-        #ocaml
-        #opam
-        ##Ocaml
-
-        #perl
-        #mercury
 
         ##Zig
         #zig
         #zls
         ##Zig
-
-        #unison-ucm
-        ###Future
 
         ##########################
 

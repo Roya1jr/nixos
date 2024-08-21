@@ -30,12 +30,14 @@
           userEmail = "princem@bestforu.co.za";
           ignores = [ "*node_modules" ];
           extraConfig = {
+
             init = {
               defaultBranch = "main";
             };
             safe = {
               directory = "/etc/nixos";
             };
+            pull.rebase = true;
           };
         };
       };
