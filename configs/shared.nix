@@ -90,6 +90,7 @@
         python311Packages.pip
         ruff-lsp
         python311Packages.python-lsp-server
+        python311Packages.ipykernel
         ##
 
         qnial
