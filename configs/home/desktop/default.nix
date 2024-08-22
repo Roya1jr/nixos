@@ -10,7 +10,8 @@
     { ... }:
     let
       upkgs = with unstable; [
-
+            flutter323
+            sdkmanager
       ];
     in
     {
