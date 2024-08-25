@@ -47,6 +47,7 @@
         gfortran
         libclang
         lldb
+        xorg.libX11
         ######
 
         cbqn-replxx

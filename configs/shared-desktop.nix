@@ -14,7 +14,7 @@
   };
   services.flatpak.enable = true;
   services.printing.enable = true;
-
+  virtualisation.waydroid.enable = true;
 
   sound.enable = true;
   hardware.pulseaudio.enable = false;
