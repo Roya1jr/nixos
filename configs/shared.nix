@@ -72,6 +72,11 @@
         #io
         (lib.hiPrio j)
 
+        ##Java
+        zulu
+        gradle
+        ##Java
+        
         ##Janet
         #janet
         #jpm
@@ -135,7 +140,6 @@
         #zig
         #zls
         ##Zig
-        zulu
         ##########################
 
         #######LSP##########
