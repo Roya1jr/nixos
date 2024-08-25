@@ -73,7 +73,7 @@
         (lib.hiPrio j)
 
         ##Java
-        zulu
+        zulu17
         gradle
         ##Java
         
