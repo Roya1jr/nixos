@@ -69,7 +69,7 @@
 
         #hare
         #io
-        j
+        (lib.hiPrio j)
 
         ##Janet
         #janet
@@ -134,7 +134,7 @@
         #zig
         #zls
         ##Zig
-
+        zulu
         ##########################
 
         #######LSP##########
@@ -167,8 +167,10 @@
         ####################
 
       ];
-    in
+            in
     {
+   
+         
       home = {
         packages = with pkgs;[
           #######CLI##########

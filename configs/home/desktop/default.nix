@@ -12,6 +12,7 @@
       upkgs = with unstable; [
             flutter323
             sdkmanager
+            android-tools
       ];
     in
     {

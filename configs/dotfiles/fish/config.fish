@@ -8,7 +8,7 @@ if status is-interactive
     set -g -x PATH "$PATH:/lib"
     set -g -x PATH "$PATH:$HOME/go/bin"
     set -g -x PATH "$PATH:$HOME/.cargo/bin"
-
+    set -g -x ANDROID_HOME "$HOME/.config/android"
     #Zoxide
     zoxide init fish | source
 
