@@ -8,9 +8,6 @@ if status is-interactive
     set -g -x PATH "$PATH:/lib"
     set -g -x PATH "$PATH:$HOME/go/bin"
     set -g -x PATH "$PATH:$HOME/.cargo/bin"
-    ##Custom
-    set -g -x ANDROID_HOME "$HOME/.config/android"
-    set -g -x CHROME_EXECUTIBLE "/var/lib/flatpak/app/com.microsoft.Edge/current/active/export/bin/com.microsoft.Edge"
     ##########################
 
     #Zoxide
