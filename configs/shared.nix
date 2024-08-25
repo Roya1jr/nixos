@@ -70,12 +70,9 @@
 
         #hare
         #io
-        (lib.hiPrio j)
+        j
 
-        ##Java
-        zulu17
-        gradle
-        ##Java
+       
         
         ##Janet
         #janet
