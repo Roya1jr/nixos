@@ -32,10 +32,11 @@
       enable = true;
       allowedTCPPortRanges = [
         { from = 1714; to = 1764; } # KDE Connect
+        { from = 8091; to = 8096; } # KDE Connect
       ];
       allowedUDPPortRanges = [
         { from = 1714; to = 1764; } # KDE Connect
-      ];
+        { from = 8091; to = 8096; }       ];
     };
   };
   ##Bluetooth
