@@ -181,6 +181,7 @@
           coreutils-full
           fastfetch
           fd
+          fontfor
           git
           gzip
           htop
