@@ -57,6 +57,7 @@
     openFirewall = true;
     user = "prince";
   };
+  services.xserver.videoDrivers = [ "amdgpu" ];
   ##############
   system.stateVersion = "23.11";
 }

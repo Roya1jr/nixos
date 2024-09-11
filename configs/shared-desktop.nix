@@ -68,7 +68,6 @@
         blender
         dbeaver-bin
         godot_4
-        heroic
         hyprland
         inkscape
         mpv
