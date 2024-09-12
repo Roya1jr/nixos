@@ -194,6 +194,7 @@
           ripgrep
           rsync
           sshs
+          sqlite
           starship
           tealdeer
           traceroute
