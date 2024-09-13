@@ -39,18 +39,11 @@
         ####################
 
         #######Programming##########i
-
-        ##ADA##
-        alire
-        (lib.hiPrio gnat13)
-        gnat13Packages.gprbuild-boot
-        #######
-
         ##C++#
         cmake
         gforth
         glibc
-        gfortran13
+        gfortran14
         libclang
         lldb
         xorg.libX11
