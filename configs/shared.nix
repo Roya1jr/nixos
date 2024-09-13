@@ -50,7 +50,7 @@
         cmake
         gforth
         glibc
-        gfortran
+        gfortran13
         libclang
         lldb
         xorg.libX11
