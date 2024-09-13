@@ -1,4 +1,4 @@
-{ pkgs, unstable, inputs, system, ... }:
+{ pkgs, unstable, inputs, lib, ... }:
 {
   services.printing.enable = true;
   services.openssh.enable = true;
@@ -38,9 +38,15 @@
         #murex
         ####################
 
-        #######Programming##########
+        #######Programming##########i
 
-        ##C++##
+        ##ADA##
+        alire
+        (lib.hiPrio gnat13)
+        gnat13Packages.gprbuild-boot
+        #######
+
+        ##C++#
         cmake
         gforth
         glibc
@@ -70,7 +76,7 @@
 
         #hare
         #io
-        j
+        (lib.hiPrio j)
 
        
         
@@ -132,6 +138,8 @@
         uiua
         #unison-ucm
         yaml-language-server
+
+        zulu
 
         ##Zig
         #zig
