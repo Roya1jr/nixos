@@ -9,6 +9,9 @@
   ];
   wsl.enable = true;
   wsl.defaultUser = "prince";
+  wsl.extraBin = with pkgs; [
+  { src = "${coreutils}/bin/uname"; }
+];
   home-manager.users.prince =
     { ... }:
     let
