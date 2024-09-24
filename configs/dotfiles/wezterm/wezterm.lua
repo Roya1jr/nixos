@@ -10,7 +10,7 @@ end
 
 -- default shell
 config.default_prog = {'/run/current-system/sw/bin/fish' }
-
+config.enable_wayland = false
 -- For example, changing the color scheme:
 config.color_scheme = 'Gruvbox dark, hard (base16)'
 config.font = wezterm.font('Red Hat Mono' ,{stretch='Normal'})

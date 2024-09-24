@@ -126,6 +126,7 @@
         nixpkgs-fmt
         ##Nix
 
+        ngn-k
         rustup
         tailwindcss
         wasmtime
