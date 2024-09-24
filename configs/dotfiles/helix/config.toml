@@ -1,9 +1,11 @@
 theme = "gruvbox_dark_hard"
-lsp.display-inlay-hints = true
 
 [editor]
 line-number = "relative"
 mouse = false
+
+[editor.lsp]
+display-inlay-hints = true
 
 [editor.soft-wrap]
 enable = true

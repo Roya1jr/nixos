@@ -12,7 +12,7 @@ min_time = 100000
 format = "underwent [$duration](bold yellow)"
 
 [directory]
-truncation_length = 20
+truncation_length = 40
 truncation_symbol = "…/"
 
 [status]
