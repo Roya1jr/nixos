@@ -36,6 +36,7 @@
       upkgs = with unstable; [
         #######CLI##########
         #murex
+        license-generator
         ####################
 
         #######Programming#########
