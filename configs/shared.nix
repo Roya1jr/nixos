@@ -165,6 +165,7 @@
         ##########################
 
         #######Fonts##########
+        nerdfonts
         fantasque-sans-mono
         hack-font
         julia-mono
