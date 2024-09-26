@@ -86,7 +86,8 @@ config = {userLanguages = {rust = "html",".rs" = "html",templ = "html","*.templ"
 name = "templ"
 language-servers = ["tailwindcss-ls","templ-lsp","emmet-lsp"]
 comment-token = "//"
-formatter = { command = "goimports" }
+formatter = { command = "templ fmt" }
+auto-format = true
 [language-server.templ-lsp]
 command = "templ"
 args = ["lsp"]
