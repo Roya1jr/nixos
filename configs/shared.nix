@@ -129,7 +129,12 @@
 
         ngn-k
         rustup
+        
+        ##Tailwind
         tailwindcss
+        tailwindcss-language-server
+        ##Tailwind
+        
         wasmtime
         uiua
         #unison-ucm
