@@ -49,6 +49,7 @@
         libclang
         lldb
         xorg.libX11
+        raylib
         ######
 
         cbqn-replxx
