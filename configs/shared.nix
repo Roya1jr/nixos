@@ -63,6 +63,7 @@
         air
         go_1_22
         golangci-lint
+        golangci-lint-langserver
         gopls
         gotools
         hugo
