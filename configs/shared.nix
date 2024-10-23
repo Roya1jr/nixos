@@ -141,7 +141,7 @@
         #unison-ucm
         yaml-language-server
 
-        zulu
+        zulu17
 
         ##Zig
         #zig
