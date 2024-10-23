@@ -16,7 +16,8 @@
     {
       home = {
         packages = with pkgs;[
-
+          calibre
+          calibre-web
 
         ] ++ upkgs;
         stateVersion = "23.11";
