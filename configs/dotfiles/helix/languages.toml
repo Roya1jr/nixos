@@ -18,7 +18,7 @@ args = ["lsp"]
 [[grammar]]
 name = "uiua"
 source.git = "https://github.com/shnarazk/tree-sitter-uiua"
-source.rev = "942e8365d10b9b62be9f2a8b0503459d3d8f3af3"
+source.rev = "f68684eb49ce0494cb2ddb6f7d52237d6278f68b"
 
 [[language]]
 name = "bqn"
@@ -40,26 +40,6 @@ command = "bqnlsp"
 name = "bqn"
 source.git = "https://github.com/shnarazk/tree-sitter-bqn"
 source.rev = "a90b371503f158699042423918e4c5e9285f5519"
-
-[[language]]
-name = "gleam"
-scope = "source.gleam"
-injection-regex = "gleam"
-file-types = ["gleam"]
-auto-format = true
-comment-token = "//"
-language-servers = [ "gleam-lsp" ]
-indent = { tab-width = 2, unit = "\t" }
-shebangs = ["gleam"]
-
-[language-server.gleam-lsp]
-command = "gleam"
-args = ["lsp"]
-
-[[grammar]]
-name = "gleam"
-source.git = "https://github.com/gleam-lang/tree-sitter-gleam"
-source.rev = "2012f294baacf30e7a62414754021284377366c6"
 
 [language-server.emmet-lsp]
 command = "emmet-language-server"
