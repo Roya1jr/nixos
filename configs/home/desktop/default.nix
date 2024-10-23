@@ -10,7 +10,10 @@
     { ... }:
     let
       upkgs = with unstable; [
-          
+          flutter
+          android-tools
+          android-studio-tools
+          android-studio
       ];
     in
     {
