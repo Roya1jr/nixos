@@ -10,13 +10,17 @@
     { ... }:
     let
       upkgs = with unstable; [
-          
+          flutter
+          android-tools
+          android-studio-tools
+          android-studio
       ];
     in
     {
       home = {
         packages = with pkgs;[
-
+          calibre
+          calibre-web
 
         ] ++ upkgs;
         stateVersion = "23.11";
