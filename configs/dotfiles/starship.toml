@@ -31,9 +31,9 @@ disabled = false
 format = '[$symbol \[$name\]]($style) '
 
 [shell]
-nu_indicator = "󰌽"
-fish_indicator = "󰌽"
-powershell_indicator = ""
+nu_indicator = ""
+fish_indicator = "󰈺"
+powershell_indicator = "󰨊"
 unknown_indicator = "?"
 disabled = false
 
