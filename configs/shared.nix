@@ -37,6 +37,7 @@
         #######CLI##########
         #murex
         license-generator
+        carapace
         ####################
 
         #######Programming#########
