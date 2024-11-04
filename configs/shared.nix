@@ -221,6 +221,8 @@
       };
 
       home.file = {
+        ".config/nushell/config.nu".source = ./dotfiles/nushell/config.nu;
+        ".config/nushell/env.nu".source = ./dotfiles/nushell/env.nu;
         ".config/fish/config.fish".source = ./dotfiles/fish/config.fish;
         ".config/starship.toml".source = ./dotfiles/starship.toml;
         ".config/helix/languages.toml".source = ./dotfiles/helix/languages.toml;
