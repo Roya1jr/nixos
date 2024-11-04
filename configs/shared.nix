@@ -38,6 +38,7 @@
         #murex
         license-generator
         carapace
+        nushell
         ####################
 
         #######Programming#########
@@ -201,7 +202,6 @@
           jq
           lsd
           lsof
-          nushellFull
           openssh
           openssl
           parallel
