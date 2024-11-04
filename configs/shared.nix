@@ -200,6 +200,7 @@
           jq
           lsd
           lsof
+          nushellFull
           openssh
           openssl
           parallel
