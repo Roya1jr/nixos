@@ -9,10 +9,10 @@
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    bqnlsp = {
-      url = "sourcehut:/~detegr/bqnlsp";
-      flake = true;
-    };
+    # bqnlsp = {
+    #   url = "sourcehut:/~detegr/bqnlsp";
+    #   flake = true;
+    # };
   };
 
   outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, ... }:
@@ -33,6 +33,7 @@
               specialArgs = {
                 inherit inputs;
                 inherit unstable;
+                inherit pkgs;
               };
               modules = [
                 entrypoint

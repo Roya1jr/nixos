@@ -54,7 +54,7 @@
         raylib
         ######
 
-        cbqn-replxx
+        #cbqn-replxx
         #dotnet-sdk_8
         erlang_26
         factor-lang
@@ -153,7 +153,7 @@
 
         #######LSP##########
         dockerfile-language-server-nodejs
-        inputs.bqnlsp.packages.${"x86_64-linux"}.lsp
+        #inputs.bqnlsp.packages.${"x86_64-linux"}.lsp
         taplo
         marksman
         ####################

@@ -20,26 +20,26 @@ name = "uiua"
 source.git = "https://github.com/shnarazk/tree-sitter-uiua"
 source.rev = "f3fb8b8fe367b00e2ad858a419da3dedc8cbeeeb"
 
-[[language]]
-name = "bqn"
-file-types = ["bqn"]
-comment-token = "#"
-indent = { tab-width = 2, unit = "\t" }
-shebangs = ["bqn", "cbqn"]
-injection-regex = "bqn"
-scope = "scope.bqn"
-language-servers = ["bqnlsp"]
-language-id = "bqn"
+# [[language]]
+# name = "bqn"
+# file-types = ["bqn"]
+# comment-token = "#"
+# indent = { tab-width = 2, unit = "\t" }
+# shebangs = ["bqn", "cbqn"]
+# injection-regex = "bqn"
+# scope = "scope.bqn"
+# language-servers = ["bqnlsp"]
+# language-id = "bqn"
 
 
-[language-server.bqnlsp]
-command = "bqnlsp"
+# [language-server.bqnlsp]
+# command = "bqnlsp"
 
 
-[[grammar]]
-name = "bqn"
-source.git = "https://github.com/shnarazk/tree-sitter-bqn"
-source.rev = "a90b371503f158699042423918e4c5e9285f5519"
+# [[grammar]]
+# name = "bqn"
+# source.git = "https://github.com/shnarazk/tree-sitter-bqn"
+# source.rev = "a90b371503f158699042423918e4c5e9285f5519"
 
 [language-server.emmet-lsp]
 command = "emmet-language-server"

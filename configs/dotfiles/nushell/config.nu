@@ -135,9 +135,9 @@ let light_theme = {
 }
 
 # External completer example
-let carapace_completer = {|spans|
-    carapace $spans.0 nushell $spans | from json
-}
+#let carapace_completer = {|spans|
+#    carapace $spans.0 nushell $spans | from json
+#}
 
 # The default config record. This is where much of your global configuration is setup.
 $env.config = {
@@ -208,7 +208,7 @@ $env.config = {
         external: {
             enable: true # set to false to prevent nushell looking into $env.PATH to find more suggestions, `false` recommended for WSL users as this look up may be very slow
             max_results: 100 # setting it lower can improve completion performance at the cost of omitting some options
-            completer: $carapace_completer
+           # completer: $carapace_completer
         }
     }
 
@@ -792,5 +792,5 @@ alias vi =  hx
 ##
 
 use ~/.cache/starship/init.nu
-source ~/.zoxide.nu
 source ~/.cache/carapace/init.nu
+source ~/.zoxide.nu
