@@ -65,12 +65,7 @@
         (dyalog.override { acceptLicense = true; })
         #######Programming##########
         ## GUI
-        blender
-        dbeaver-bin
-        godot_4
         hyprland
-        inkscape
-        mpv
         ride
         vscode
         zed-editor
