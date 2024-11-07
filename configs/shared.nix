@@ -161,7 +161,7 @@
         #######Prog Tools##########
         helix
         gnumake
-
+        fly
         ##Podman
         buildah
         podman
