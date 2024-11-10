@@ -81,7 +81,6 @@
       "org.qbittorrent.qBittorrent"
       "net.nokyan.Resources"
       "io.mpv.Mpv"
-      "dev.lapce.lapce"
   ];
   
   home-manager.users.prince =
