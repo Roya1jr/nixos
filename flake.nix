@@ -9,13 +9,14 @@
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak"; 
     # bqnlsp = {
     #   url = "sourcehut:/~detegr/bqnlsp";
     #   flake = true;
     # };
   };
 
-  outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, ... }:
+  outputs = inputs@{ nixpkgs, nixpkgs-unstable, home-manager, nix-flatpak, ... }:
 
     let
       system = "x86_64-linux";
@@ -36,6 +37,7 @@
                 inherit pkgs;
               };
               modules = [
+                nix-flatpak.nixosModules.nix-flatpak
                 entrypoint
                 { nix.registry.nixpkgs.flake = nixpkgs; }
                 home-manager.nixosModules.home-manager
@@ -43,6 +45,7 @@
                   home-manager = {
                     useGlobalPkgs = true;
                     useUserPackages = true;
+                    extraSpecialArgs.flake-inputs = inputs;
                   };
                 }
               ];
