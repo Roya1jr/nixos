@@ -205,6 +205,7 @@
           openssh
           openssl
           parallel
+          plover.dev
           ripgrep
           rsync
           sshs
