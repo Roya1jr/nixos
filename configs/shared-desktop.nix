@@ -16,7 +16,6 @@
   services.printing.enable = true;
   virtualisation.waydroid.enable = true;
   virtualisation.libvirtd.enable = true; 
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire =
